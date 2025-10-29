@@ -1,0 +1,23 @@
+/* styles/EntitlementGrid.module.css */
+.container {
+    margin-top: 2rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .noResults {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .resultSummary {
+    color: var(--text-light);
+    text-align: right;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }

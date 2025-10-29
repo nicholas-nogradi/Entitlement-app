@@ -1,0 +1,221 @@
+{
+  "consumer": {
+    "name": "EntitlementConsumer"
+  },
+  "interactions": [
+    {
+      "description": "a request for a non-existent entitlement with id 999",
+      "providerState": "no entitlement with ID 999 exists",
+      "request": {
+        "method": "GET",
+        "path": "/entitlements/999"
+      },
+      "response": {
+        "body": {
+          "message": "Entitlement not found",
+          "status": "error"
+        },
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "$.body.message": {
+            "match": "type"
+          },
+          "$.body.status": {
+            "match": "type"
+          }
+        },
+        "status": 404
+      }
+    },
+    {
+      "description": "a request for entitlement with id 5",
+      "providerState": "entitlements 5 exists",
+      "request": {
+        "method": "GET",
+        "path": "/entitlements/5"
+      },
+      "response": {
+        "body": {
+          "data": [
+            {
+              "csp_ID": "CSP123",
+              "end_string": "2026-05-19",
+              "entitlementID": 5,
+              "entitlement_group_ID": "group123",
+              "entitlement_version": "v1",
+              "product_type": "software",
+              "quantity": 10,
+              "ship_string": "2025-05-19",
+              "sku": "SKU123",
+              "start_string": "2025-05-20",
+              "status": "FULFILLED",
+              "term": "12 months"
+            }
+          ],
+          "message": "success",
+          "status": "success"
+        },
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "$.body.data": {
+            "match": "type",
+            "min": 1
+          },
+          "$.body.data[*].csp_ID": {
+            "match": "type"
+          },
+          "$.body.data[*].end_string": {
+            "match": "type"
+          },
+          "$.body.data[*].entitlementID": {
+            "match": "type"
+          },
+          "$.body.data[*].entitlement_group_ID": {
+            "match": "type"
+          },
+          "$.body.data[*].entitlement_version": {
+            "match": "type"
+          },
+          "$.body.data[*].product_type": {
+            "match": "type"
+          },
+          "$.body.data[*].quantity": {
+            "match": "type"
+          },
+          "$.body.data[*].ship_string": {
+            "match": "type"
+          },
+          "$.body.data[*].sku": {
+            "match": "type"
+          },
+          "$.body.data[*].start_string": {
+            "match": "type"
+          },
+          "$.body.data[*].status": {
+            "match": "type"
+          },
+          "$.body.data[*].term": {
+            "match": "type"
+          },
+          "$.body.message": {
+            "match": "type"
+          },
+          "$.body.status": {
+            "match": "type"
+          }
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "a request for entitlements",
+      "providerState": "entitlements exist",
+      "request": {
+        "method": "GET",
+        "path": "/entitlements",
+        "query": "limit=2&offset=0"
+      },
+      "response": {
+        "body": {
+          "count": 2,
+          "data": [
+            {
+              "csp_ID": "CSP123",
+              "end_string": "2026-05-19",
+              "entitlementID": 1,
+              "entitlement_group_ID": "group123",
+              "entitlement_version": "v1",
+              "product_type": "software",
+              "quantity": 10,
+              "ship_string": "2026-05-19",
+              "sku": "SKU123",
+              "start_string": "2025-05-20",
+              "status": "FULFILLED",
+              "term": "12 months"
+            }
+          ],
+          "limit": 2,
+          "offset": 0,
+          "total": 5
+        },
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "$.body.count": {
+            "match": "type"
+          },
+          "$.body.data": {
+            "match": "type",
+            "min": 1
+          },
+          "$.body.data[*].csp_ID": {
+            "match": "type"
+          },
+          "$.body.data[*].end_string": {
+            "match": "type"
+          },
+          "$.body.data[*].entitlementID": {
+            "match": "type"
+          },
+          "$.body.data[*].entitlement_group_ID": {
+            "match": "type"
+          },
+          "$.body.data[*].entitlement_version": {
+            "match": "type"
+          },
+          "$.body.data[*].product_type": {
+            "match": "type"
+          },
+          "$.body.data[*].quantity": {
+            "match": "type"
+          },
+          "$.body.data[*].ship_string": {
+            "match": "type"
+          },
+          "$.body.data[*].sku": {
+            "match": "type"
+          },
+          "$.body.data[*].start_string": {
+            "match": "type"
+          },
+          "$.body.data[*].status": {
+            "match": "type"
+          },
+          "$.body.data[*].term": {
+            "match": "type"
+          },
+          "$.body.limit": {
+            "match": "type"
+          },
+          "$.body.offset": {
+            "match": "type"
+          },
+          "$.body.total": {
+            "match": "type"
+          }
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "14.0.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  },
+  "provider": {
+    "name": "EntitlementProvider"
+  }
+}

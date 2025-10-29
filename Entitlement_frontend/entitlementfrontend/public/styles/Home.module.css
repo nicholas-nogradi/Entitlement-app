@@ -1,0 +1,20 @@
+/* styles/Home.module.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .loading, .error {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .error {
+    color: var(--danger-color);
+  }

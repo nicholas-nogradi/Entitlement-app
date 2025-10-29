@@ -1,0 +1,19 @@
+/* styles/EntitlementDetailPage.module.css */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+  }

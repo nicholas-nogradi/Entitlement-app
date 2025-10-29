@@ -1,0 +1,83 @@
+/* styles/EntitlementCard.module.css */
+.card {
+    background-color: var(--card-background);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    transition: var(--transition);
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .statusBadge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .fulfilled {
+    background-color: var(--secondary-color);
+  }
+  
+  .pending {
+    background-color: var(--warning-color);
+  }
+  
+  .canceled {
+    background-color: var(--danger-color);
+  }
+  
+  .cardHeader {
+    margin-bottom: 1rem;
+  }
+  
+  .cardHeader h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .sku {
+    color: var(--text-light);
+    font-size: 0.875rem;
+  }
+  
+  .cardContent {
+    flex: 1;
+  }
+  
+  .infoRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .label {
+    color: var(--text-light);
+    font-weight: 500;
+  }
+  
+  .cardFooter {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .viewDetails {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-align: right;
+  }

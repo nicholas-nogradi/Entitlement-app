@@ -1,0 +1,29 @@
+{
+  "name": "entitlementfrontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test:pact": "mocha api.pact.spec.js --timeout 30000",
+    "test:publish": "pact-broker publish ./pacts --auto-detect-version-properties --branch=$(npx -y absolute-version) --broker-base-url=https://nicksdemoorg.pactflow.io --broker-token=wRRUmkd3MsTq3ECkfcD46Q",
+    "can-i-deploy": "pact-broker can-i-deploy --pacticipant=EntitlementConsumer --version=$(npx -y absolute-version) --broker-base-url=https://nicksdemoorg.pactflow.io --broker-token=wRRUmkd3MsTq3ECkfcD46Q"
+  },
+  "dependencies": {
+    "chai-as-promised": "^8.0.1",
+    "next": "15.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@pact-foundation/pact": "^14.0.0",
+    "chai": "^5.2.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.3",
+    "mocha": "^11.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}

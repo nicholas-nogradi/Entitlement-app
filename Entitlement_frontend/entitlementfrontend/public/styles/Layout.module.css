@@ -1,0 +1,20 @@
+/* styles/Layout.module.css */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 2rem 0;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--card-background);
+    font-size: 0.875rem;
+    color: var(--text-light);
+  }
