@@ -2,8 +2,78 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../public/styles/EntitlementCard.module.css';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import styled, { css, useTheme } from 'styled-components';
 
-const EntitlementCard = ({ entitlement }) => {
+
+export const EntitlementCardSkeleton = () => {
+  const { color } = useTheme();
+  return (
+    /* @ts-expect-error wrong types! */
+    <SkeletonTheme color={color.skeletonBase} highlightColor={color.skeletonHighlight}>
+      <div className={styles.card} style={{ padding: '1.5rem' }}>
+        <div className={styles.statusBadge} style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
+          <Skeleton width="80px" height="20px" />
+        </div>
+        
+        <div className={styles.cardHeader}>
+          <h3 style={{ marginBottom: '0.5rem' }}>
+            <Skeleton width="150px" height="25px" />
+          </h3>
+          <div className={styles.sku}>
+            <Skeleton width="100px" height="16px" />
+          </div>
+        </div>
+        
+        <div className={styles.cardContent}>
+          <div className={styles.infoRow}>
+            <span className={styles.label}>
+              <Skeleton width="70px" height="16px" />
+            </span>
+            <span>
+              <Skeleton width="100px" height="16px" />
+            </span>
+          </div>
+          
+          <div className={styles.infoRow}>
+            <span className={styles.label}>
+              <Skeleton width="80px" height="16px" />
+            </span>
+            <span>
+              <Skeleton width="110px" height="16px" />
+            </span>
+          </div>
+          
+          <div className={styles.infoRow}>
+            <span className={styles.label}>
+              <Skeleton width="70px" height="16px" />
+            </span>
+            <span>
+              <Skeleton width="90px" height="16px" />
+            </span>
+          </div>
+          
+          <div className={styles.infoRow}>
+            <span className={styles.label}>
+              <Skeleton width="75px" height="16px" />
+            </span>
+            <span>
+              <Skeleton width="50px" height="16px" />
+            </span>
+          </div>
+        </div>
+        
+        <div className={styles.cardFooter}>
+          <div className={styles.viewDetails}>
+            <Skeleton width="120px" height="16px" />
+          </div>
+        </div>
+      </div>
+    </SkeletonTheme>
+  )
+}
+
+const EntitlementCard = ({ entitlement, isLoading = false } ) => {
   // Helper function to format dates
   const formatDate = (dateString) => {
     if (!dateString) return 'N/A';
@@ -23,6 +93,10 @@ const EntitlementCard = ({ entitlement }) => {
         return '';
     }
   };
+
+  if (isLoading) {
+    return <EntitlementCardSkeleton />;
+  }
 
   return (
     <Link href={`/entitlements/${entitlement.entitlementID}`}>

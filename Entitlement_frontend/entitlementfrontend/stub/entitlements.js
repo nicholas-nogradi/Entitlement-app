@@ -1,0 +1,72 @@
+const entitlement = [
+  {
+    csp_ID: 'CSP001',
+    quantity: 100,
+    activation_date: '2025-01-15',
+    end_date: '2026-01-15',
+    is_eval: false,
+    entitlement_version: '1.0',
+    entitlement_group_ID: 'EG-001',
+    uom: 'SEATS',
+    product_type: 'SOFTWARE',
+    term: '12 MONTHS',
+    source_ID: 'SRC-2025-001',
+    sku: 'SKU-12345',
+    ship_date: '2024-12-20',
+    start_date: '2025-01-01',
+    status: 'PENDING'
+  },
+  {
+    csp_ID: 'CSP002',
+    quantity: 50,
+    activation_date: '2025-02-01',
+    end_date: '2026-02-01',
+    is_eval: true,
+    entitlement_version: '2.1',
+    entitlement_group_ID: 'EG-002',
+    uom: 'LICENSES',
+    product_type: 'CLOUD',
+    term: '6 MONTHS',
+    source_ID: 'SRC-2025-002',
+    sku: 'SKU-67890',
+    ship_date: '2025-01-10',
+    start_date: '2025-02-01',
+    status: 'PENDING'
+  },
+  {
+    csp_ID: 'CSP003',
+    quantity: 250,
+    activation_date: '2025-03-10',
+    end_date: '2027-03-10',
+    is_eval: false,
+    entitlement_version: '1.5',
+    entitlement_group_ID: 'EG-003',
+    uom: 'UNITS',
+    product_type: 'SUBSCRIPTION',
+    term: '24 MONTHS',
+    source_ID: 'SRC-2025-003',
+    sku: 'SKU-11111',
+    ship_date: '2025-02-28',
+    start_date: '2025-03-01',
+    status: 'PENDING'
+  },
+  {
+     csp_ID: null,
+    quantity: null,
+    activation_date: null,
+    end_date: null,
+    is_eval: false,
+    entitlement_version: null,
+    entitlement_group_ID: null,
+    uom: null,
+    product_type: null,
+    term: null,
+    source_ID: null,
+    sku: null,
+    ship_date: null,
+    start_date: null,
+    status: 'FULFILLED'
+  }
+]
+
+export default entitlement
