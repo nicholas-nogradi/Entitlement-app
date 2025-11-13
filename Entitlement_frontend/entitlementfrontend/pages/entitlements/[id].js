@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '../../components/Layout';
-import EntitlementDetail from '../../components/EntitlementDetail';
+import EntitlementDetail from '../../components/EntitlementDetail/EntitlementDetail';
 import { getEntitlementById } from '../../lib/api';
 import styles from '../../public/styles/EntitlementDetailPage.module.css';
 

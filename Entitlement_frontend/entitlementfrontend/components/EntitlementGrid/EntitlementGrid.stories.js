@@ -1,5 +1,5 @@
 import EntitlementGrid from "./EntitlementGrid";
-import entitlements from "../stub/entitlements.js";
+import entitlements from "../../stub/entitlements.js";
 
 const meta = {
     title: 'Components/EntitlementGrid',

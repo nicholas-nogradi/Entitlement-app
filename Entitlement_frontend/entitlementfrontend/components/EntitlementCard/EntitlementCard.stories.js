@@ -1,5 +1,5 @@
-import EntitlementCard from './EntitlementCard.jsx';
-import entitlement from '../stub/entitlements.js';
+import EntitlementCard from './EntitlementCard.jsx'
+import entitlement from '../../stub/entitlements.js';
 import { ThemeProvider } from 'styled-components';
 
 const theme = {

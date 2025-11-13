@@ -1,10 +1,10 @@
 // pages/index.js
 import React, { useState, useEffect } from 'react';
-import Layout from '../components/Layout';
-import SearchBar from '../components/SearchBar';
-import EntitlementGrid from '../components/EntitlementGrid';
-import { getEntitlements, searchEntitlements } from '../lib/api';
-import styles from '../public/styles/Home.module.css';
+import Layout from '../../components/Layout';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import EntitlementGrid from '../../components/EntitlementGrid/EntitlementGrid';
+import { getEntitlements, searchEntitlements } from '../../lib/api';
+import styles from '../../public/styles/Home.module.css';
 
 export default function Home() {
   const [entitlements, setEntitlements] = useState(null);

@@ -1,7 +1,7 @@
 // components/Header.jsx
 import React from 'react';
 import Link from 'next/link';
-import styles from '../public/styles/Header.module.css';
+import styles from '../../public/styles/Header.module.css';
 
 const Header = () => {
   return (

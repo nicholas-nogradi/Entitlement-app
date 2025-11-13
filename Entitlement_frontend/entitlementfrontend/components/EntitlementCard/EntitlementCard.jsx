@@ -1,9 +1,9 @@
 // components/EntitlementCard.jsx
 import React from 'react';
 import Link from 'next/link';
-import styles from '../public/styles/EntitlementCard.module.css';
+import styles from '../../public/styles/EntitlementCard.module.css';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-import styled, { css, useTheme } from 'styled-components';
+import { useTheme } from 'styled-components';
 
 
 export const EntitlementCardSkeleton = () => {

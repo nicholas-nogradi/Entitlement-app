@@ -1,7 +1,7 @@
 // components/EntitlementDetail.jsx
 import React from 'react';
 import Link from 'next/link';
-import styles from '../public/styles/EntitlementDetail.module.css';
+import styles from '../../public/styles/EntitlementDetail.module.css';
 
 const EntitlementDetail = ({ entitlement }) => {
   // Helper function to format dates

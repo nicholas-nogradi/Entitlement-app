@@ -1,7 +1,7 @@
 // components/Layout.jsx
 import React from 'react';
 import Head from 'next/head';
-import Header from './Header';
+import Header from './Header/Header';
 import styles from '../public/styles/Layout.module.css';
 
 const Layout = ({ children, title = 'Entitlement Manager' }) => {

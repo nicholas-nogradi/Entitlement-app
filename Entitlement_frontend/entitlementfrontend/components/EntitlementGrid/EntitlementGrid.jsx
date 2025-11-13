@@ -1,8 +1,8 @@
 // components/EntitlementGrid.jsx
 import React from 'react';
-import EntitlementCard from './EntitlementCard';
-import Pagination from './Pagination';
-import styles from '../public/styles/EntitlementGrid.module.css';
+import EntitlementCard from '../EntitlementCard/EntitlementCard';
+import Pagination from '../Pagination/Pagination';
+import styles from '../../public/styles/EntitlementGrid.module.css';
 
 const EntitlementGrid = ({ entitlements, pagination, onPageChange }) => {
   const { data = [], total = 0, count = 0, limit = 20, offset = 0 } = entitlements || {};

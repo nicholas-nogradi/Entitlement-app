@@ -1,5 +1,5 @@
 import EntitlementDetail from './EntitlementDetail.jsx';
-import entitlement from '../stub/entitlements.js';
+import entitlement from '../../stub/entitlements.js';
 
 const meta = {
     title: 'Components/EntitlementDetail',

@@ -1,6 +1,6 @@
 // components/Pagination.jsx
 import React from 'react';
-import styles from '../public/styles/Pagination.module.css';
+import styles from '../../public/styles/Pagination.module.css';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   // Calculate pages to display (show max 5 pages)
