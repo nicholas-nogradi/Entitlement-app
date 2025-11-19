@@ -33,3 +33,16 @@ export const NoResults = {
         pagination: {},
     }
 }
+
+export const SinglePage = {
+    args: {
+        entitlements: {
+            data: entitlements.slice(0, 5),
+            total: 5,
+            count: 5,
+            limit: 20,
+            offset: 0,
+        },
+        pagination: {},
+    }
+}
