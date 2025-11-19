@@ -1,4 +1,4 @@
-import EntitlementGrid from "./EntitlementGrid";
+import EntitlementGrid from "./EntitlementGrid.jsx";
 import entitlements from "../../stub/entitlements.js";
 
 const meta = {

@@ -1,4 +1,4 @@
-import Home from '../entitlements/index.js';
+import Home from './index.jsx';
 
 const meta  = {
     title: 'Pages/EntitlementDashboard',
